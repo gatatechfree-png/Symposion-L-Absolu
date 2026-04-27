@@ -43,9 +43,9 @@ header {
 
 /* --- MOUVEMENTS SYMPOSION --- */
 
-/* La Reine : Élévation et Pulsation de Puissance */
-#queen-prime {
-    width: 220px;
+/* Sir Roland : Élévation et Pulsation de Puissance (Remplace Queen Prime) */
+#sir-roland {
+    width: 250px;
     border: 4px double #d4af37;
     padding: 10px;
     animation: absoluteRise 6s infinite alternate ease-in-out;
@@ -56,14 +56,18 @@ header {
     100% { transform: translateY(-40px) rotate(2deg); box-shadow: 0 0 60px #d4af37; filter: brightness(1.2); }
 }
 
-/* Les Valkyries : Patrouille Orbitale (Mouvement en 8) */
-.valkyrie {
-    width: 130px;
+/* Les Vikings : Patrouille Orbitale (Mouvement en 8) */
+.viking-guard {
+    width: 180px;
     z-index: 100;
+    border-radius: 10px;
 }
 
-.v-north { animation: orbitLeft 8s infinite ease-in-out; }
-.v-south { animation: orbitRight 10s infinite ease-in-out; }
+/* Le Viking à la Hache (Gauche) */
+.v-axe { animation: orbitLeft 8s infinite ease-in-out; }
+
+/* Le Viking à la Lance (Droite) */
+.v-spear { animation: orbitRight 10s infinite ease-in-out; }
 
 @keyframes orbitLeft {
     0% { transform: translate(0, 0) scale(1); }
@@ -80,7 +84,7 @@ header {
     100% { transform: translate(0, 0) scale(1); }
 }
 
-/* Le Garde Berserker : Vigilance Saccadée */
+/* On garde le BerserkerAlert au cas où tu réintègres un garde en bas plus tard */
 #berserker-guard {
     width: 110px;
     animation: berserkerAlert 1s infinite steps(2);
@@ -96,6 +100,12 @@ header {
     display: flex;
     justify-content: space-around;
     padding: 100px 50px;
+    flex-wrap: wrap;
+}
+
+.rune-card {
+    text-align: center;
+    margin: 20px;
 }
 
 .rune-label {
@@ -103,6 +113,8 @@ header {
     border-left: 5px solid #8b0000;
     padding: 10px 20px;
     background: rgba(212, 175, 55, 0.05);
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .shield-frame {
@@ -113,6 +125,7 @@ header {
     padding: 40px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 40px;
     transition: 0.5s;
 }
@@ -120,4 +133,12 @@ header {
 .shield-frame:hover {
     border-color: #d4af37;
     background: rgba(139, 0, 0, 0.1);
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    font-size: 0.8em;
+    letter-spacing: 3px;
+    opacity: 0.6;
 }
